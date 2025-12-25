@@ -12,18 +12,39 @@ const navLinks = [
 ];
 
 export function Header() {
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
 
+      if (currentScrollY < 10) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location]);
 
   return (
-    <header className="w-full transition-all duration-300 shadow-sm bg-white">
+    <header className={cn(
+      "w-full fixed top-0 z-50 transition-all duration-300 shadow-sm bg-white",
+      isVisible ? "translate-y-0" : "-translate-y-full"
+    )}>
 
       <div className="container mx-auto px-4">
         {/* Mobile Layout (Logo Left, Menu Right) */}
@@ -33,7 +54,7 @@ export function Header() {
             <img
               src="/renuka_logo_v3.png"
               alt="Renuka Packaging Industries"
-              className="h-12 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
           </Link>
 
@@ -60,7 +81,7 @@ export function Header() {
               <img
                 src="/renuka_logo_v3.png"
                 alt="Renuka Packaging Industries"
-                className="h-16 w-auto object-contain"
+                className="h-20 w-auto object-contain"
               />
             </Link>
 

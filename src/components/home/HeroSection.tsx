@@ -4,9 +4,18 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[80vh] flex items-center gradient-hero">
-      <div className="absolute inset-0 bg-foreground/10" />
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="relative min-h-[80vh] flex items-center gradient-hero overflow-hidden">
+      <div className="absolute inset-0 bg-foreground/15 z-10" />
+      <div
+        className="absolute inset-0 z-0 opacity-20"
+        style={{
+          backgroundImage: 'url("/hero-product-bg.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-3xl mx-auto text-center">
           <AnimatedSection animation="fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
@@ -21,17 +30,15 @@ export function HeroSection() {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-in-up" delay={200}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button
-                size="lg"
-                className="w-full sm:w-56 bg-background text-primary hover:bg-background/90 font-semibold"
+                className="w-full sm:w-64 h-16 text-xl bg-white text-primary hover:bg-white/95 font-bold shadow-lg transition-all hover:scale-105"
                 asChild
               >
                 <Link to="/products">Explore Solutions</Link>
               </Button>
               <Button
-                size="lg"
-                className="w-full sm:w-56 bg-background text-primary hover:bg-background/90 font-semibold"
+                className="w-full sm:w-64 h-16 text-xl bg-white text-primary hover:bg-white/95 font-bold shadow-lg transition-all hover:scale-105"
                 asChild
               >
                 <Link to="/contact">Contact Us</Link>

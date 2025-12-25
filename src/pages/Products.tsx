@@ -23,19 +23,13 @@ export const products = [
     id: "heat-shrink-sleeves",
     name: "Heat Shrink Sleeves",
     description: "360-degree branding coverage with conformable labels for complex container shapes.",
-    image: "/images/products/stand-up-pouches-2.jpg"
+    image: "/heat-shrink-sleeves.png"
   },
   {
     id: "center-seal-pouches",
     name: "Center Seal Pouches",
     description: "Cost-effective solution with a back seal, widely used for grains, powders, and snacks.",
-    image: "/images/products/center-seal-bags.jpg"
-  },
-  {
-    id: "preformed-pouches",
-    name: "Preformed Pouches",
-    description: "Custom-shaped and spout pouches designed for liquid and paste applications.",
-    image: "/images/products/spout-pouches.jpg"
+    image: "/centre-seal-pouch.png"
   },
   {
     id: "stand-up-pouches",
@@ -44,10 +38,10 @@ export const products = [
     image: "/images/products/stand-up-pouches-1.jpg"
   },
   {
-    id: "twist-grade-film",
-    name: "Twist Grade Film",
-    description: "Excellent twist retention films for confectionery and candy wrapping.",
-    image: "/images/products/laminate-rolls.jpg"
+    id: "spout-pouches",
+    name: "Spout Pouches",
+    description: "Convenient spout pouches ideal for liquids, sauces, and beverages with easy dispensing.",
+    image: "/images/products/spout-pouches.jpg"
   },
 ];
 
@@ -55,8 +49,9 @@ const Products = () => {
   return (
     <Layout>
       <PageHero
-        title="Our Products Placeholder"
-        subtitle="Products page subtitle placeholder text here."
+        title="Our Products"
+        subtitle="High-quality flexible packaging solutions for every industry."
+        backgroundImage="/hero-product-bg.png"
       />
 
       <section className="py-16 md:py-24">
@@ -76,12 +71,9 @@ const Products = () => {
                     <h3 className="text-lg font-semibold text-foreground mb-2">
                       {product.name}
                     </h3>
-                    <p className="text-muted-foreground text-sm mb-4">
+                    <p className="text-muted-foreground text-sm">
                       {product.description}
                     </p>
-                    <Button variant="default" size="sm" asChild>
-                      <Link to={`/products/${product.id}`}>View Details</Link>
-                    </Button>
                   </CardContent>
                 </Card>
               </AnimatedSection>

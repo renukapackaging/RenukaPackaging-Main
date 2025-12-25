@@ -9,21 +9,21 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
-          <div>
+          <div className="md:col-span-2">
             <div className="mb-6">
               <img
                 src="/renuka_logo_v3.png"
                 alt="Renuka Packaging Industries"
-                className="h-20 w-auto object-contain"
+                className="h-28 w-auto object-contain"
               />
             </div>
-            <p className="text-background/70 text-sm">
+            <p className="text-background/70 text-sm max-w-md">
               Renuka Packaging Industries is a leader in flexible packaging solutions, committed to quality, innovation, and sustainability.
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
+          {/* Quick Links - Moved to Right */}
+          <div className="md:text-right">
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <nav className="flex flex-col gap-2">
               <Link to="/" className="text-sm text-background/70 hover:text-background transition-colors">
@@ -40,56 +40,24 @@ export function Footer() {
               </Link>
             </nav>
           </div>
-
-          {/* Newsletter */}
-          <div>
-            <h3 className="text-lg font-bold mb-4">Newsletter</h3>
-            <p className="text-background/70 text-sm mb-4">
-              Subscribe to stay updated with our latest packaging innovations.
-            </p>
-            <div className="flex gap-2">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-background/10 border-background/20 text-background placeholder:text-background/50"
-              />
-              <Button variant="secondary" size="sm">
-                Subscribe
-              </Button>
-            </div>
-          </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-background/20 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-background/70">
-            © 2024 Copyright Placeholder. All rights reserved.
+            © 2024 Renuka Packaging Industries. All rights reserved.
           </p>
-
-          {/* Social Icons */}
-          <div className="flex gap-4">
+          <p className="text-sm text-background/70">
+            Powered by{" "}
             <a
-              href="#"
-              className="text-background/70 hover:text-background transition-colors"
-              aria-label="Facebook"
+              href="https://buildoholics.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-semibold"
             >
-              <Facebook className="h-5 w-5" />
+              Buildoholics
             </a>
-            <a
-              href="#"
-              className="text-background/70 hover:text-background transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a
-              href="#"
-              className="text-background/70 hover:text-background transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter className="h-5 w-5" />
-            </a>
-          </div>
+          </p>
         </div>
       </div>
     </footer>

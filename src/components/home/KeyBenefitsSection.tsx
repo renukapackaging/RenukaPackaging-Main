@@ -26,8 +26,8 @@ export function KeyBenefitsSection() {
             <AnimatedSection key={index} delay={index * 100}>
               <Card className="hover-lift h-full border-border/50 bg-card">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-lg gradient-primary flex items-center justify-center mb-4">
-                    <benefit.icon className="h-6 w-6 text-primary-foreground" />
+                  <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-4">
+                    <benefit.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">
                     {benefit.title}
