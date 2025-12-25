@@ -5,9 +5,9 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 export function HeroSection() {
   return (
     <section className="relative min-h-[80vh] flex items-center gradient-hero overflow-hidden">
-      <div className="absolute inset-0 bg-foreground/15 z-10" />
+      <div className="absolute inset-0 bg-black/60 z-10" />
       <div
-        className="absolute inset-0 z-0 opacity-20"
+        className="absolute inset-0 z-0 opacity-40"
         style={{
           backgroundImage: 'url("/hero-product-bg.png")',
           backgroundSize: 'cover',
@@ -18,13 +18,13 @@ export function HeroSection() {
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-3xl mx-auto text-center">
           <AnimatedSection animation="fade-in-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-xl">
               Innovation in every Layer
             </h1>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-in-up" delay={100}>
-            <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-white/95 mb-8 max-w-2xl mx-auto drop-shadow-md">
               Premium flexible packaging solutions that elevate your brand and protect your products. Experience the perfect fusion of innovation, durability, and aesthetics.
             </p>
           </AnimatedSection>

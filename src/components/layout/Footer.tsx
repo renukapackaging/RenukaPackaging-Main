@@ -12,7 +12,7 @@ export function Footer() {
           <div>
             <div className="mb-6">
               <img
-                src="/renuka_logo_v3.png"
+                src="/renuka_logo.png"
                 alt="Renuka Packaging Industries"
                 className="h-28 w-auto object-contain"
               />

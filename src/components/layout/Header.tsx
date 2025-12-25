@@ -42,28 +42,29 @@ export function Header() {
 
   return (
     <header className={cn(
-      "w-full fixed top-0 z-50 transition-all duration-300 shadow-sm bg-white",
+      "w-full fixed top-0 z-50 transition-all duration-300 shadow-sm bg-foreground",
       isVisible ? "translate-y-0" : "-translate-y-full"
     )}>
 
       <div className="container mx-auto px-4">
         {/* Mobile Layout (Logo Left, Menu Right) */}
-        <div className="flex h-24 items-center justify-between md:hidden">
+        <div className="flex h-20 items-center justify-between md:hidden">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="/renuka_logo_v3.png"
+              src="/renuka_logo.png"
               alt="Renuka Packaging Industries"
               className="h-16 w-auto object-contain"
             />
           </Link>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Inverse colors for visibility */}
           <Button
             variant="ghost"
             size="icon"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
+            className="text-background hover:bg-background/10 hover:text-background"
           >
             {isMobileMenuOpen ? (
               <X className="h-5 w-5" />
@@ -74,14 +75,14 @@ export function Header() {
         </div>
 
         {/* Desktop Layout (Strictly Centered) */}
-        <div className="hidden md:flex h-24 items-center justify-center w-full relative">
+        <div className="hidden md:flex h-28 items-center justify-center w-full relative">
           <div className="flex items-center gap-16">
             {/* Logo */}
             <Link to="/" className="flex items-center hover:opacity-90 transition-opacity">
               <img
-                src="/renuka_logo_v3.png"
+                src="/renuka_logo.png"
                 alt="Renuka Packaging Industries"
-                className="h-20 w-auto object-contain"
+                className="h-24 w-auto object-contain"
               />
             </Link>
 
@@ -96,7 +97,7 @@ export function Header() {
 
                     location.pathname === link.href
                       ? "text-primary"
-                      : "text-foreground"
+                      : "text-background"
                   )}
                 >
                   {link.name}
@@ -125,7 +126,7 @@ export function Header() {
                   "px-4 py-2 text-sm font-medium rounded-md transition-colors",
                   location.pathname === link.href
                     ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-muted/20"
+                    : "text-background hover:bg-background/10"
                 )}
               >
                 {link.name}
