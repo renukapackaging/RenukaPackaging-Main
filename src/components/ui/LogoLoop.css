@@ -1,0 +1,64 @@
+.logoloop {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.logoloop__track {
+    display: flex;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+.logoloop__list {
+    display: flex;
+    align-items: center;
+    gap: var(--logoloop-gap, 32px);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-shrink: 0;
+    /* Add padding-right equal to gap to space out the lists, since we are using gap on flex container but we need space between lists too. */
+    /* Actually, if we use gap on the track, it might be better. */
+    /* Let's use padding-right on the list to ensure space between the duplicate lists */
+    padding-right: var(--logoloop-gap, 32px);
+}
+
+.logoloop--vertical {
+    flex-direction: column;
+}
+
+.logoloop--vertical .logoloop__track {
+    flex-direction: column;
+}
+
+.logoloop--vertical .logoloop__list {
+    flex-direction: column;
+    padding-right: 0;
+    padding-bottom: var(--logoloop-gap, 32px);
+}
+
+.logoloop__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoloop__item img {
+    height: var(--logoloop-logoHeight, 28px);
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.logoloop--fade {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logoloop--scale-hover .logoloop__item img {
+    transition: transform 0.3s ease;
+}
+
+.logoloop--scale-hover .logoloop__item:hover img {
+    transform: scale(1.1);
+}

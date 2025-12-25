@@ -6,32 +6,26 @@ export function IntroSection() {
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-            Section Title Placeholder
+            Packaging Without Compromise
           </h2>
         </AnimatedSection>
-        
+
         <div className="max-w-4xl mx-auto space-y-6">
           <AnimatedSection delay={100}>
             <p className="text-muted-foreground leading-relaxed">
-              Paragraph placeholder. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              At Renuka Packaging, we understand that packaging is the silent ambassador of your brand. It's the first touchpoint for your customers and the final layer of protection for your product. That's why we don't just manufacture packaging; we engineer solutions that balance superior barrier protection with stunning visual appeal.
             </p>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={200}>
             <p className="text-muted-foreground leading-relaxed">
-              Second paragraph placeholder. Duis aute irure dolor in reprehenderit in voluptate 
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-              non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Our state-of-the-art facility utilizes advanced polymer science and cutting-edge printing technology to deliver vibrant, high-definition graphics on materials that withstand the rigors of the supply chain. From food safety compliance to extended shelf life, our standards exceed industry expectations.
             </p>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={300}>
             <p className="text-muted-foreground leading-relaxed">
-              Third paragraph placeholder. Sed ut perspiciatis unde omnis iste natus error sit 
-              voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae 
-              ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              We are committed to driving sustainability in the packaging industry. By offering recyclable laminates and optimizing material usage, we help forward-thinking brands reduce their environmental footprint without sacrificing performance or aesthetics.
             </p>
           </AnimatedSection>
         </div>

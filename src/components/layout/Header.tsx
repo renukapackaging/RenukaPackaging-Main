@@ -12,67 +12,35 @@ const navLinks = [
 ];
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location]);
 
   return (
-    <header
-      className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300",
-        isScrolled
-          ? "bg-background/95 backdrop-blur-sm shadow-md"
-          : "bg-background"
-      )}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Link
-            to="/"
-            className="text-xl font-bold text-primary transition-colors hover:text-primary/80"
-          >
-            LOGO
-          </Link>
+    <header className="w-full transition-all duration-300 shadow-sm bg-white">
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary relative",
-                  location.pathname === link.href
-                    ? "text-primary"
-                    : "text-foreground"
-                )}
-              >
-                {link.name}
-                {location.pathname === link.href && (
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full" />
-                )}
-              </Link>
-            ))}
-          </nav>
+      <div className="container mx-auto px-4">
+        {/* Mobile Layout (Logo Left, Menu Right) */}
+        <div className="flex h-24 items-center justify-between md:hidden">
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
+            <img
+              src="/renuka_logo_v3.png"
+              alt="Renuka Packaging Industries"
+              className="h-12 w-auto object-contain"
+            />
+          </Link>
 
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -82,6 +50,42 @@ export function Header() {
               <Menu className="h-5 w-5" />
             )}
           </Button>
+        </div>
+
+        {/* Desktop Layout (Strictly Centered) */}
+        <div className="hidden md:flex h-24 items-center justify-center w-full relative">
+          <div className="flex items-center gap-16">
+            {/* Logo */}
+            <Link to="/" className="flex items-center hover:opacity-90 transition-opacity">
+              <img
+                src="/renuka_logo_v3.png"
+                alt="Renuka Packaging Industries"
+                className="h-16 w-auto object-contain"
+              />
+            </Link>
+
+            {/* Navigation */}
+            <nav className="flex items-center gap-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className={cn(
+                    "text-base font-bold transition-colors hover:text-primary relative",
+
+                    location.pathname === link.href
+                      ? "text-primary"
+                      : "text-foreground"
+                  )}
+                >
+                  {link.name}
+                  {location.pathname === link.href && (
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full" />
+                  )}
+                </Link>
+              ))}
+            </nav>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -109,6 +113,6 @@ export function Header() {
           </nav>
         </div>
       </div>
-    </header>
+    </header >
   );
 }

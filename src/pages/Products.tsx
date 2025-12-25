@@ -7,62 +7,71 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export const products = [
-  { 
-    id: "3-side-seal-pouches", 
-    name: "3 Side Seal Pouches Placeholder", 
-    description: "Product description placeholder for 3 Side Seal Pouches." 
+  {
+    id: "3-side-seal-pouches",
+    name: "3 Side Seal Pouches",
+    description: "Versatile and secure, perfect for single-serve applications, pharmaceuticals, and flat items.",
+    image: "/images/products/center-seal-bags.jpg"
   },
-  { 
-    id: "flexible-laminate-rolls", 
-    name: "Flexible Laminate Rolls Placeholder", 
-    description: "Product description placeholder for Flexible Laminate Rolls." 
+  {
+    id: "flexible-laminate-rolls",
+    name: "Flexible Laminate Rolls",
+    description: "High-performance roll stock optimized for automated packaging lines, ensuring efficiency.",
+    image: "/images/products/laminate-rolls.jpg"
   },
-  { 
-    id: "heat-shrink-sleeves", 
-    name: "Heat Shrink Sleeves Placeholder", 
-    description: "Product description placeholder for Heat Shrink Sleeves." 
+  {
+    id: "heat-shrink-sleeves",
+    name: "Heat Shrink Sleeves",
+    description: "360-degree branding coverage with conformable labels for complex container shapes.",
+    image: "/images/products/stand-up-pouches-2.jpg"
   },
-  { 
-    id: "center-seal-pouches", 
-    name: "Center Seal Pouches Placeholder", 
-    description: "Product description placeholder for Center Seal Pouches." 
+  {
+    id: "center-seal-pouches",
+    name: "Center Seal Pouches",
+    description: "Cost-effective solution with a back seal, widely used for grains, powders, and snacks.",
+    image: "/images/products/center-seal-bags.jpg"
   },
-  { 
-    id: "preformed-pouches", 
-    name: "Preformed Pouches Placeholder", 
-    description: "Product description placeholder for Preformed Pouches." 
+  {
+    id: "preformed-pouches",
+    name: "Preformed Pouches",
+    description: "Custom-shaped and spout pouches designed for liquid and paste applications.",
+    image: "/images/products/spout-pouches.jpg"
   },
-  { 
-    id: "stand-up-pouches", 
-    name: "Stand Up Pouches Placeholder", 
-    description: "Product description placeholder for Stand Up Pouches." 
+  {
+    id: "stand-up-pouches",
+    name: "Stand Up Pouches",
+    description: "Shelf-ready designs with superior branding space and consumer convenience features.",
+    image: "/images/products/stand-up-pouches-1.jpg"
   },
-  { 
-    id: "twist-grade-film", 
-    name: "Twist Grade Film Placeholder", 
-    description: "Product description placeholder for Twist Grade Film." 
+  {
+    id: "twist-grade-film",
+    name: "Twist Grade Film",
+    description: "Excellent twist retention films for confectionery and candy wrapping.",
+    image: "/images/products/laminate-rolls.jpg"
   },
 ];
 
 const Products = () => {
   return (
     <Layout>
-      <PageHero 
-        title="Our Products Placeholder" 
+      <PageHero
+        title="Our Products Placeholder"
         subtitle="Products page subtitle placeholder text here."
       />
-      
+
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
               <AnimatedSection key={product.id} delay={index * 100}>
-                <Card className="hover-lift h-full border-border/50 overflow-hidden">
-                  <PlaceholderImage
-                    text={`${product.name} Image`}
-                    aspectRatio="video"
-                    className="rounded-none"
-                  />
+                <Card className="hover-lift h-full border-border/50 overflow-hidden group">
+                  <div className="aspect-video w-full overflow-hidden bg-white">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
                   <CardContent className="p-6">
                     <h3 className="text-lg font-semibold text-foreground mb-2">
                       {product.name}

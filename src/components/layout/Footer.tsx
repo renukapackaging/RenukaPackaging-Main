@@ -10,15 +10,21 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-lg font-bold mb-4">LOGO</h3>
+            <div className="mb-6">
+              <img
+                src="/renuka_logo_v3.png"
+                alt="Renuka Packaging Industries"
+                className="h-20 w-auto object-contain"
+              />
+            </div>
             <p className="text-background/70 text-sm">
-              Company Description Placeholder. Lorem ipsum dolor sit amet consectetur.
+              Renuka Packaging Industries is a leader in flexible packaging solutions, committed to quality, innovation, and sustainability.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links Placeholder</h3>
+            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <nav className="flex flex-col gap-2">
               <Link to="/" className="text-sm text-background/70 hover:text-background transition-colors">
                 Home
@@ -37,14 +43,14 @@ export function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Newsletter Placeholder</h3>
+            <h3 className="text-lg font-bold mb-4">Newsletter</h3>
             <p className="text-background/70 text-sm mb-4">
-              Newsletter description placeholder text here.
+              Subscribe to stay updated with our latest packaging innovations.
             </p>
             <div className="flex gap-2">
               <Input
                 type="email"
-                placeholder="Email Placeholder"
+                placeholder="Enter your email"
                 className="bg-background/10 border-background/20 text-background placeholder:text-background/50"
               />
               <Button variant="secondary" size="sm">
@@ -59,7 +65,7 @@ export function Footer() {
           <p className="text-sm text-background/70">
             © 2024 Copyright Placeholder. All rights reserved.
           </p>
-          
+
           {/* Social Icons */}
           <div className="flex gap-4">
             <a

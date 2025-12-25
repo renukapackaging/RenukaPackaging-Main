@@ -3,12 +3,12 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Card, CardContent } from "@/components/ui/card";
 
 const benefits = [
-  { icon: Shield, title: "Benefit 1 Placeholder", description: "Benefit description placeholder text here." },
-  { icon: Zap, title: "Benefit 2 Placeholder", description: "Benefit description placeholder text here." },
-  { icon: Recycle, title: "Benefit 3 Placeholder", description: "Benefit description placeholder text here." },
-  { icon: Award, title: "Benefit 4 Placeholder", description: "Benefit description placeholder text here." },
-  { icon: Package, title: "Benefit 5 Placeholder", description: "Benefit description placeholder text here." },
-  { icon: Truck, title: "Benefit 6 Placeholder", description: "Benefit description placeholder text here." },
+  { icon: Shield, title: "Unmatched Durability", description: "Multi-layer protection against moisture, oxygen, and UV light to preserve product integrity." },
+  { icon: Zap, title: "Rapid Production", description: "High-speed manufacturing lines ensuring rapid turnaround times for orders of any scale." },
+  { icon: Recycle, title: "Eco-Conscious Options", description: "Sustainable, recyclable material structures supporting your green initiatives." },
+  { icon: Award, title: "Certified Quality", description: "ISO certified processes guaranteeing consistent, food-grade safe packaging." },
+  { icon: Package, title: "Custom Engineering", description: "Tailored barrier properties and structures engineered for your specific product needs." },
+  { icon: Truck, title: "Reliable Logistics", description: "Streamlined supply chain management ensuring on-time delivery, every time." },
 ];
 
 export function KeyBenefitsSection() {
@@ -17,10 +17,10 @@ export function KeyBenefitsSection() {
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
-            Key Benefits Placeholder
+            Why Choose Renuka Packaging?
           </h2>
         </AnimatedSection>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((benefit, index) => (
             <AnimatedSection key={index} delay={index * 100}>
