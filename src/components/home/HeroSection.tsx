@@ -35,7 +35,7 @@ export function HeroSection() {
                 className="w-full sm:w-64 h-16 text-xl bg-white text-primary hover:bg-white/95 font-bold shadow-lg transition-all hover:scale-105"
                 asChild
               >
-                <Link to="/products">Explore Solutions</Link>
+                <Link to="/products">Explore Products</Link>
               </Button>
               <Button
                 className="w-full sm:w-64 h-16 text-xl bg-white text-primary hover:bg-white/95 font-bold shadow-lg transition-all hover:scale-105"

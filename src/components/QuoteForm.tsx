@@ -42,9 +42,9 @@ export const QuoteForm = () => {
         if (validate()) {
             setIsLoading(true);
             try {
-                const SERVICE_ID = "service_cofsnv4";
-                const TEMPLATE_ID = "template_lmu7hca";
-                const PUBLIC_KEY = "62jBr0IrQu3XFfylH";
+                const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+                const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+                const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
                 emailjs.init(PUBLIC_KEY);
 
@@ -53,7 +53,7 @@ export const QuoteForm = () => {
                     SERVICE_ID,
                     TEMPLATE_ID,
                     {
-                        to_email: "kondru.hemanthsai@gmail.com",
+                        to_email: "renukapackaging18@gmail.com",
                         name: formData.name,
                         email: formData.email,
                         phone: formData.phone,
@@ -64,7 +64,7 @@ export const QuoteForm = () => {
                 );
 
                 // Send auto-reply (optional, doesn't block success if it fails)
-                const AUTO_REPLY_TEMPLATE_ID = "template_t2js74h";
+                const AUTO_REPLY_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID;
                 if (AUTO_REPLY_TEMPLATE_ID) {
                     try {
                         await emailjs.send(
@@ -146,7 +146,7 @@ export const QuoteForm = () => {
                         <SelectContent>
                             {products.map((p) => (
                                 <SelectItem key={p.id} value={p.name}>
-                                    {p.name.replace(" Placeholder", "")}
+                                    {p.name}
                                 </SelectItem>
                             ))}
                         </SelectContent>
