@@ -36,16 +36,16 @@ export function Footer() {
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-primary shrink-0" />
-                <div className="text-sm text-background/70">
-                  <p>+91 9912318175</p>
-                  <p>+91 8340913271</p>
+                <div className="text-sm text-background/70 flex flex-col">
+                  <a href="tel:+919912318175" className="hover:text-primary transition-colors">+91 9912318175</a>
+                  <a href="tel:+918340913271" className="hover:text-primary transition-colors">+91 8340913271</a>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
-                <div className="text-sm text-background/70">
-                  <p>renukapackaging18@gmail.com</p>
-                  <p>Sales.renukapack@gmail.com</p>
+                <div className="text-sm text-background/70 flex flex-col">
+                  <a href="mailto:renukapackaging18@gmail.com" className="hover:text-primary transition-colors">renukapackaging18@gmail.com</a>
+                  <a href="mailto:Sales.renukapack@gmail.com" className="hover:text-primary transition-colors">Sales.renukapack@gmail.com</a>
                 </div>
               </div>
             </div>

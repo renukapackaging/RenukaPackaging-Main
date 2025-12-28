@@ -51,16 +51,24 @@ const Contact = () => {
                       <Phone className="h-5 w-5 text-primary mt-0.5" />
                       <div>
                         <p className="font-medium">Phone</p>
-                        <p className="text-muted-foreground">+91 9912318175</p>
-                        <p className="text-muted-foreground">+91 8340913271</p>
+                        <div className="flex flex-col">
+                          <a href="tel:+919912318175" className="text-muted-foreground hover:text-primary transition-colors">+91 9912318175</a>
+                          <a href="tel:+918340913271" className="text-muted-foreground hover:text-primary transition-colors">+91 8340913271</a>
+                        </div>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Mail className="h-5 w-5 text-primary mt-0.5" />
                       <div>
                         <p className="font-medium">Email</p>
-                        <p className="text-muted-foreground">renukapackaging18@gmail.com (Company)</p>
-                        <p className="text-muted-foreground">Sales.renukapack@gmail.com (Sales)</p>
+                        <div className="flex flex-col">
+                          <a href="mailto:renukapackaging18@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                            renukapackaging18@gmail.com <span className="text-xs text-muted-foreground/70">(Company)</span>
+                          </a>
+                          <a href="mailto:Sales.renukapack@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                            Sales.renukapack@gmail.com <span className="text-xs text-muted-foreground/70">(Sales)</span>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </CardContent>
