@@ -55,7 +55,9 @@ export const QuoteForm = () => {
                     {
                         to_email: "renukapackaging18@gmail.com",
                         name: formData.name,
-                        email: formData.email,
+                        email: "renukapackaging18@gmail.com", // Force admin email as recipient
+                        reply_to: formData.email, // Set reply-to as user's email
+                        user_email: formData.email, // Pass user email for body content if needed
                         phone: formData.phone,
                         product_type: formData.product_type,
                         quantity: formData.quantity,

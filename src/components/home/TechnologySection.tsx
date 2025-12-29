@@ -2,32 +2,32 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 const machinery = [
     {
-        title: "Texpro",
+        title: "Texpro 400",
         image: "/machine3.jpg",
         description: "Our high-speed workhorse, featuring a fully automated PLC system and servo-driven control for precision pouch making. It delivers exceptional output rates up to 600 PPM while maintaining micron-level accuracy."
     },
     {
-        title: "Spout machine",
+        title: "Spout making machine",
         image: "/machine4.jpg",
         description: "A robust multi-format machine designed for continuous heavy-duty operation. Its versatile sealing capabilities support various pouch styles, ensuring reliable performance even during extended 24/7 production cycles."
     },
     {
-        title: "Texpro 400",
+        title: "Texpro 500",
         image: "/machine5.jpg",
         description: "Engineered for medium-to-high volume runs, this machine features advanced temperature control and tension systems. It ensures perfect seal integrity and minimal wastage, making it ideal for premium packaging."
     },
     {
-        title: "Center seal machine",
+        title: "Center Seal Machine",
         image: "/machine6.jpg",
         description: "A specialized unit for high-precision spout insertion. It utilizes automated alignment sensors to ensure leak-proof bonding, crucial for liquid packaging reliability in food and beverage sectors."
     },
     {
-        title: "High-Speed Packaging Line",
+        title: "GS - 620",
         image: "/machine7.jpg",
         description: "An integrated end-to-end automated line that combines pouch forming, filling, and sealing. Optimized for scalability, it significantly reduces manual handling and ensures varying output speeds aligned with demand."
     },
     {
-        title: "GT 24 PLUS 200",
+        title: "GS - 520",
         image: "/gt-24-plus-200.png",
         description: "A high-performance pouch making machine designed for versatility and speed. It handles complex pouch structures with ease, ensuring superior seal strength and productivity for diverse packaging needs."
     }
