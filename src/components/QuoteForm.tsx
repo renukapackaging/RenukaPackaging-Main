@@ -21,6 +21,7 @@ export const QuoteForm = () => {
         product_type: "",
         quantity: "",
         message: "",
+        custom_product_details: "",
     });
     const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -31,6 +32,9 @@ export const QuoteForm = () => {
         else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = "Invalid email";
         if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
         if (!formData.product_type) newErrors.product_type = "Please select a product type";
+        if (formData.product_type === "Custom Product" && !formData.custom_product_details.trim()) {
+            newErrors.custom_product_details = "Please describe your product";
+        }
         if (!formData.quantity.trim()) newErrors.quantity = "Quantity is required";
         if (!formData.message.trim()) newErrors.message = "Message is required";
         setErrors(newErrors);
@@ -61,7 +65,10 @@ export const QuoteForm = () => {
                         phone: formData.phone,
                         product_type: formData.product_type,
                         quantity: formData.quantity,
-                        message: formData.message,
+
+                        message: formData.product_type === "Custom Product"
+                            ? `Product Description: ${formData.custom_product_details}\n\n${formData.message}`
+                            : formData.message,
                     }
                 );
 
@@ -162,6 +169,24 @@ export const QuoteForm = () => {
                     {errors.quantity && <p className="text-sm text-destructive mt-1">{errors.quantity}</p>}
                 </div>
             </div>
+
+            {formData.product_type === "Custom Product" && (
+                <div>
+                    <Label htmlFor="custom_product_details" className="text-base font-medium mb-2 block">
+                        Describe Your Product <span className="text-destructive">*</span>
+                    </Label>
+                    <Input
+                        id="custom_product_details"
+                        value={formData.custom_product_details}
+                        onChange={(e) => setFormData({ ...formData, custom_product_details: e.target.value })}
+                        className={`h-12 ${errors.custom_product_details ? "border-destructive" : ""}`}
+                        placeholder="Please describe the product you are looking for..."
+                    />
+                    {errors.custom_product_details && (
+                        <p className="text-sm text-destructive mt-1">{errors.custom_product_details}</p>
+                    )}
+                </div>
+            )}
 
 
             <div>
