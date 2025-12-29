@@ -27,7 +27,7 @@ export const products = [
   },
   {
     id: "center-seal-pouches",
-    name: "Center Seal Pouches",
+    name: "Flat Bottom Standy and Zipper Pouches",
     description: "Cost-effective solution with a back seal, widely used for grains, powders, and snacks.",
     image: "/centre-seal-pouch.png"
   },

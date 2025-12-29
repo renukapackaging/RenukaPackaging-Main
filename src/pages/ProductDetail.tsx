@@ -43,7 +43,7 @@ const productDetails: Record<string, {
   },
   "center-seal-pouches": {
     description: [
-      "Description paragraph 1 placeholder for Center Seal Pouches. Lorem ipsum dolor sit amet.",
+      "Description paragraph 1 placeholder for Flat Bottom Standy and Zipper Pouches. Lorem ipsum dolor sit amet.",
       "Description paragraph 2 placeholder. Excepteur sint occaecat cupidatat non proident.",
     ],
     materials: ["Material 1 Placeholder", "Material 2 Placeholder", "Material 3 Placeholder"],
