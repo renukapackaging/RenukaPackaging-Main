@@ -151,6 +151,7 @@ export const QuoteForm = () => {
                                     {p.name}
                                 </SelectItem>
                             ))}
+                            <SelectItem value="Custom Product">Other / Custom Product</SelectItem>
                         </SelectContent>
                     </Select>
                     {errors.product_type && <p className="text-sm text-destructive mt-1">{errors.product_type}</p>}
